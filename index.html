@@ -19,9 +19,9 @@
   <meta name="twitter:description" content="We migrate companies from rigid SaaS rentals to sovereign, automated infrastructure." />
   <meta name="twitter:image" content="https://neckles.io/assets/og-image.png" />
   <meta name="theme-color" content="#0b0c10" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.svg" sizes="any" />
-  <link rel="apple-touch-icon" href="/assets/favicon.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -110,7 +110,7 @@
           class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
           :class="scrolled || open ? 'bg-ink/90 backdrop-blur border-b hairline' : 'bg-transparent border-b border-transparent'">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-      <a href="/" class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-white">
+      <a href="./" class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-white">
         <span class="text-accent">◆</span> NECKLES <span class="text-accent">IO</span>
       </a>
       <div class="hidden items-center gap-8 md:flex">
@@ -238,9 +238,14 @@
   <section id="leadership" class="border-t hairline bg-ink py-24">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid gap-12 lg:grid-cols-3">
-        <div class="lg:col-span-1">
-          <p class="font-display text-sm font-medium uppercase tracking-[0.25em] text-accent">Principal Architect</p>
-          <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Alejandro (Ricky) Neckles, BASc.</h2>
+        <div class="lg:col-span-1 flex flex-col items-start gap-6">
+          <img src="assets/headshot.jpg"
+               alt="Alejandro (Ricky) Neckles — Principal Architect, Neckles IO"
+               class="w-full max-w-xs rounded-xl object-cover shadow-lg" />
+          <div>
+            <p class="font-display text-sm font-medium uppercase tracking-[0.25em] text-accent">Principal Architect</p>
+            <h2 class="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Alejandro (Ricky) Neckles, BASc.</h2>
+          </div>
         </div>
         <div class="space-y-6 text-lg leading-relaxed text-mist lg:col-span-2">
           <p>Neckles IO is led by Alejandro Neckles, a Mechanical Engineer (University of Toronto) turned Enterprise Systems Architect.</p>
@@ -281,11 +286,11 @@
           <p class="mt-2 text-sm text-mist">We build automated revenue systems.</p>
         </div>
         <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-          <a href="/privacy-policy/" class="text-mist transition hover:text-accent">Privacy Policy</a>
-          <a href="/terms-of-service/" class="text-mist transition hover:text-accent">Terms of Service</a>
-          <a href="/full-disclosure/" class="text-mist transition hover:text-accent">Full Disclosure</a>
-          <a href="/dmca/" class="text-mist transition hover:text-accent">DMCA Policy</a>
-          <a href="/disclaimer/" class="text-mist transition hover:text-accent">Disclaimer</a>
+          <a href="privacy-policy/" class="text-mist transition hover:text-accent">Privacy Policy</a>
+          <a href="terms-of-service/" class="text-mist transition hover:text-accent">Terms of Service</a>
+          <a href="full-disclosure/" class="text-mist transition hover:text-accent">Full Disclosure</a>
+          <a href="dmca/" class="text-mist transition hover:text-accent">DMCA Policy</a>
+          <a href="disclaimer/" class="text-mist transition hover:text-accent">Disclaimer</a>
         </nav>
       </div>
       <div class="mt-10 flex flex-col gap-2 border-t hairline pt-8 text-sm text-mist/60 md:flex-row md:items-center md:justify-between">
