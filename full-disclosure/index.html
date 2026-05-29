@@ -26,7 +26,13 @@
   <style>
     html { scroll-behavior: smooth; }
     [x-cloak] { display:none !important; }
-    body { background-color:#0b0c10; }
+    body {
+      background-color: #050608;
+      background-image:
+        radial-gradient(ellipse 110rem 80rem at 85% -10%, rgba(69,162,158,0.22), transparent 58%),
+        radial-gradient(ellipse 55rem 35rem at 100% 2%, rgba(102,252,241,0.09), transparent 45%);
+      background-attachment: fixed;
+    }
     .hairline { border-color: rgba(255,255,255,0.08); }
     .legal h2 { font-family:'Space Grotesk',sans-serif; color:#fff; font-size:1.15rem; font-weight:600; letter-spacing:0.02em; margin-top:2.5rem; margin-bottom:0.85rem; }
     .legal h3 { color:#66fcf1; font-weight:600; margin-top:1.75rem; margin-bottom:0.4rem; }
@@ -44,8 +50,9 @@
 
   <header class="sticky top-0 z-50 border-b hairline bg-ink/90 backdrop-blur">
     <nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-      <a href="../" class="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-white">
-        <span class="text-accent">◆</span> NECKLES <span class="text-accent">IO</span>
+      <a href="../" class="flex items-center gap-3 font-display text-lg font-bold tracking-tight text-white">
+        <img src="../favicon.svg" alt="Neckles IO" class="h-9 w-9 rounded-lg" />
+        NECKLES <span class="text-accent">IO</span>
       </a>
       <a href="../#contact" class="rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">Inquire</a>
     </nav>
