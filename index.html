@@ -480,10 +480,10 @@
                   placeholder="Your organization" />
               </div>
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">What are you trying to fix? <span class="text-accent">*</span></label>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">What are you trying to automate? <span class="text-accent">*</span></label>
                 <textarea x-model="message" required rows="5"
                   class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition resize-none"
-                  placeholder="Describe your current situation and what you need to change."></textarea>
+                  placeholder="Describe the process and where the manual work lives today."></textarea>
               </div>
               <p x-show="state === 'error'" class="text-sm text-red-400">Something went wrong. Email us directly at support@neckles.io.</p>
               <button type="submit" :disabled="state === 'sending'"
