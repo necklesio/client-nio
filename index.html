@@ -436,7 +436,7 @@
         </div>
 
         <div x-data="{
-          name: '', email: '', company: '', message: '',
+          name: '', email: '', phone: '', company: '', message: '',
           state: 'idle',
           async submit() {
             this.state = 'sending';
@@ -449,6 +449,7 @@
                 name: this.name,
                 email: this.email,
                 company: this.company,
+                phone: this.phone,
                 message: this.message,
                 botcheck: ''
               })
@@ -473,11 +474,19 @@
                     placeholder="you@company.com" />
                 </div>
               </div>
-              <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Company</label>
-                <input x-model="company" type="text" autocomplete="organization"
-                  class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
-                  placeholder="Your organization" />
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Company</label>
+                  <input x-model="company" type="text" autocomplete="organization"
+                    class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
+                    placeholder="Your organization" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Phone <span class="text-accent">*</span></label>
+                  <input x-model="phone" type="tel" required autocomplete="tel"
+                    class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
+                    placeholder="+1 (613) 555-0100" />
+                </div>
               </div>
               <div>
                 <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">What are you trying to automate? <span class="text-accent">*</span></label>
