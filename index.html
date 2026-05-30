@@ -415,26 +415,94 @@
     </div>
   </section>
 
-  <!-- Contact / Booking -->
+  <!-- Contact -->
   <section id="contact" class="grid-glow border-t hairline py-24">
-    <div class="mx-auto max-w-5xl px-6 text-center">
-      <h2 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">Own your operations.</h2>
-      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-mist">
-        Inquire about capacity for your next infrastructure initiative.
-      </p>
-      <div class="mx-auto mt-12 max-w-3xl overflow-hidden rounded-xl border hairline bg-panel/30 p-2">
-        <iframe src="https://link.neckles.io/widget/booking/YsSZDGhljOyylrgpLRoe"
-                title="Book a consultation with Neckles IO"
-                style="width:100%; min-height:720px; border:none; overflow:hidden;"
-                scrolling="no"
-                id="YsSZDGhljOyylrgpLRoe_booking"></iframe>
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
+
+        <div>
+          <h2 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">Own your operations.</h2>
+          <p class="mt-6 text-lg leading-relaxed text-mist">Tell us what you are working on. We will let you know if we can help and what that looks like.</p>
+          <dl class="mt-10 space-y-6 text-sm">
+            <div>
+              <dt class="font-semibold text-accent">Email</dt>
+              <dd class="mt-1"><a href="mailto:support@neckles.io" class="text-mist hover:text-accent transition">support@neckles.io</a></dd>
+            </div>
+            <div>
+              <dt class="font-semibold text-accent">Based in</dt>
+              <dd class="mt-1 text-mist">Belleville, Ontario, Canada</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div x-data="{
+          name: '', email: '', company: '', message: '',
+          state: 'idle',
+          async submit() {
+            this.state = 'sending';
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify({
+                access_key: '585bf1ad-5fc8-4b40-be5c-37eaa4880b91',
+                subject: 'New inquiry — neckles.io',
+                name: this.name,
+                email: this.email,
+                company: this.company,
+                message: this.message,
+                botcheck: ''
+              })
+            });
+            this.state = res.ok ? 'sent' : 'error';
+          }
+        }">
+          <template x-if="state !== 'sent'">
+            <form @submit.prevent="submit()" class="rounded-xl border hairline bg-panel/30 p-8 space-y-6">
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none" x-model="botcheck" />
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Name <span class="text-accent">*</span></label>
+                  <input x-model="name" type="text" required autocomplete="name"
+                    class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
+                    placeholder="Your name" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Email <span class="text-accent">*</span></label>
+                  <input x-model="email" type="email" required autocomplete="email"
+                    class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
+                    placeholder="you@company.com" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">Company</label>
+                <input x-model="company" type="text" autocomplete="organization"
+                  class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition"
+                  placeholder="Your organization" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-mist/70 mb-2">What are you trying to fix? <span class="text-accent">*</span></label>
+                <textarea x-model="message" required rows="5"
+                  class="w-full rounded-lg border hairline bg-ink/60 px-4 py-3 text-sm text-white placeholder-mist/40 focus:border-accent/60 focus:outline-none focus:ring-1 focus:ring-accent/30 transition resize-none"
+                  placeholder="Describe your current situation and what you need to change."></textarea>
+              </div>
+              <p x-show="state === 'error'" class="text-sm text-red-400">Something went wrong. Email us directly at support@neckles.io.</p>
+              <button type="submit" :disabled="state === 'sending'"
+                class="w-full rounded-md bg-accent px-6 py-3.5 font-display text-sm font-semibold text-ink transition hover:bg-white disabled:opacity-60">
+                <span x-text="state === 'sending' ? 'Sending...' : 'Send Inquiry'"></span>
+              </button>
+            </form>
+          </template>
+          <template x-if="state === 'sent'">
+            <div class="rounded-xl border hairline bg-panel/30 p-12 text-center">
+              <p class="font-display text-2xl font-semibold text-white">Received.</p>
+              <p class="mt-4 text-mist">We will review your note and be in touch shortly.</p>
+            </div>
+          </template>
+        </div>
+
       </div>
-      <p class="mt-8 text-sm text-mist/70">
-        Prefer email? Reach us at <a href="mailto:support@neckles.io" class="font-semibold text-accent hover:underline">support@neckles.io</a>
-      </p>
     </div>
   </section>
-  <script src="https://link.neckles.io/js/form_embed.js" type="text/javascript"></script>
 
   <!-- Footer -->
   <footer class="border-t hairline bg-black/20 py-14">
