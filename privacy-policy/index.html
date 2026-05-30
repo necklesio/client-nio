@@ -45,20 +45,12 @@
     .legal address { font-style:normal; }
   </style>
 </head>
-
-  <svg style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <filter id="strip-white" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1.11 -1.11 -1.11 1 2.33"/>
-      </filter>
-    </defs>
-  </svg>
 <body class="font-sans text-mist antialiased selection:bg-accent selection:text-ink">
 
   <!-- Nav -->
   <header class="sticky top-0 z-50 border-b hairline bg-ink/90 backdrop-blur">
     <nav class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-      <a href="../" class="flex items-center"><img src="../assets/logo.png" alt="Neckles IO" height="52" style="height:52px;width:auto;filter:url('#strip-white')" /></a>
+      <a href="../" class="flex items-center"><img src="../assets/logo.png" alt="Neckles IO" height="52" style="height:52px;width:auto" /></a>
       <a href="../#contact" class="rounded-md border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">Inquire</a>
     </nav>
   </header>
