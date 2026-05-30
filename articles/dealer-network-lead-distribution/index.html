@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Most Dealer Networks Run on Spreadsheets and Group Texts | Neckles IO</title>
+  <meta name="description" content="Enterprise dealer management platforms are built for franchisors with hundreds of locations. For a network of five to twenty dealers, they are the wrong answer. Here is what actually works." />
+  <meta name="author" content="Alejandro (Ricky) Neckles, BASc." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://neckles.io/articles/dealer-network-lead-distribution/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Why Most Dealer Networks Run on Spreadsheets and Group Texts" />
+  <meta property="og:description" content="The problems with informal lead distribution in a small dealer network: leads go cold, there is no audit trail, and commission disputes have no resolution path." />
+  <meta property="og:url" content="https://neckles.io/articles/dealer-network-lead-distribution/" />
+  <meta property="og:image" content="https://neckles.io/assets/og-image.png" />
+  <meta property="article:author" content="Alejandro (Ricky) Neckles" />
+  <meta property="article:published_time" content="2026-05-30" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b0c10', abyss: '#050608', panel: '#1f2833',
+            mist: '#c5c6c7', accent: '#66fcf1', teal: '#45a29e',
+          },
+          fontFamily: {
+            sans: ['Inter','system-ui','sans-serif'],
+            display: ['Space Grotesk','Inter','sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #050608;
+      background-image: radial-gradient(ellipse 110rem 80rem at 85% -10%, rgba(69,162,158,0.18), transparent 58%);
+      background-attachment: fixed;
+    }
+    .hairline { border-color: rgba(255,255,255,0.08); }
+    .prose-article p { margin-bottom: 1.4rem; }
+    .prose-article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Most Dealer Networks Run on Spreadsheets and Group Texts",
+    "description": "The problems with informal lead distribution in a small dealer network, and what a purpose-built system actually needs to do.",
+    "author": { "@type": "Person", "name": "Alejandro (Ricky) Neckles", "url": "https://neckles.io/#alejandro" },
+    "publisher": { "@type": "Organization", "name": "Neckles IO", "url": "https://neckles.io/" },
+    "datePublished": "2026-05-30",
+    "url": "https://neckles.io/articles/dealer-network-lead-distribution/"
+  }
+  </script>
+</head>
+<body class="font-sans text-mist antialiased">
+
+  <header class="border-b hairline bg-ink/90 backdrop-blur">
+    <div class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+      <a href="/" class="font-display text-sm font-semibold text-accent hover:text-white transition">Neckles IO</a>
+      <a href="/#outcomes" class="text-sm text-mist hover:text-accent transition">Back to Work</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-6 py-20">
+
+    <div class="mb-10">
+      <p class="font-display text-xs font-semibold uppercase tracking-widest text-teal">Dealer Operations</p>
+      <h1 class="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+        Why Most Dealer Networks Run on Spreadsheets and Group Texts
+      </h1>
+      <p class="mt-4 text-sm text-mist/60">By Alejandro Neckles &middot; May 2026</p>
+    </div>
+
+    <div class="prose-article max-w-2xl text-base leading-relaxed text-mist">
+
+      <p>Ask any small dealer network owner how leads get distributed and the answer is usually the same: a WhatsApp group, a shared spreadsheet, or an email chain with too many reply-alls. Some combination of all three.</p>
+
+      <p>It works, up to a point. When the network is two or three dealers who know each other well, informal coordination is fine. When it grows, or when the lead volume from paid advertising picks up, the system starts to break in ways that are expensive and hard to diagnose.</p>
+
+      <p>Leads go cold because no one is certain who picked it up. Commission expectations get disputed because there is no written record of what was agreed. The owner spends part of every week sorting out situations that should resolve themselves automatically.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">Why off-the-shelf dealer software does not solve it</h2>
+
+      <p>The obvious answer is to buy dealer management software. The problem is that most dealer management platforms are built for franchise operations with fifty, a hundred, or several hundred locations. They carry the pricing, the implementation requirements, and the feature surface that comes with that scale.</p>
+
+      <p>For a network of five to twenty dealers, that is the wrong answer. The cost is too high, the implementation is too involved, and the ongoing administration creates more overhead than the problem it was supposed to solve. The result is that most small dealer networks stay on the spreadsheet indefinitely, not because the owner does not recognize the problem, but because the available solutions do not fit the actual operation.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">What the problem actually requires</h2>
+
+      <p>The core requirement of a dealer lead distribution system is straightforward: when a lead comes in, it needs to reach the right dealer immediately, that dealer needs to know what to do with it, and there needs to be a record of what happened next.</p>
+
+      <p>Isolation matters more than most people initially recognize. In an informal system, dealers have some visibility into each other's pipelines, either through shared tools or through conversation. That visibility creates friction: competitive tension between dealers, privacy concerns for customers, and disputes about who had contact with whom. The right system gives each dealer a clean view of their own leads and nothing else. Not as a courtesy, but as an architectural constraint.</p>
+
+      <p>Commission tracking is the other piece that informal systems handle badly. The amount is usually not the issue. The issue is documentation: when was it set, what was the basis, when was it paid, and who has that record. In a spreadsheet, that information lives in a cell that someone can edit. In a purpose-built system, it is a timestamped record that no one can rewrite.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">Automation at the assignment step</h2>
+
+      <p>The step that most manual systems handle worst is notification. A lead gets assigned to a dealer in a spreadsheet, but the dealer does not find out until the owner calls them or they happen to check the sheet. That lag is where leads go cold.</p>
+
+      <p>The fix is simple: the moment a lead is assigned, the dealer receives a notification with everything they need to make the first contact. Name, phone, what they are looking for, any notes from the intake. No polling, no checking, no lag. The lead is live the moment the assignment happens.</p>
+
+      <p>That single step, automated, changes the economics of a dealer network. Response time drops. Lead conversion improves. The owner stops being the bottleneck between an inbound inquiry and a dealer follow-up call.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">The ownership question</h2>
+
+      <p>A system like this does not need to be complicated or expensive. It does not need a SaaS subscription. It needs to be built for the specific operation, deployed once, and maintained as the network grows. The cost of a purpose-built system is front-loaded. The cost of the informal alternative is ongoing: in lost leads, in commission disputes, in the owner's time.</p>
+
+      <p>The dealer networks that have resolved this problem have one thing in common. They stopped looking for a platform that could be configured to fit their operation and started treating the problem as a systems design question.</p>
+
+    </div>
+
+    <div class="mt-16 rounded-xl border hairline bg-panel/30 p-8 max-w-2xl">
+      <p class="font-display text-lg font-semibold text-white">If your dealer network runs on informal coordination, the cost is in the leads you cannot measure.</p>
+      <p class="mt-3 text-sm text-mist">Neckles IO builds dealer portal and lead distribution systems for networks that have outgrown the spreadsheet.</p>
+      <a href="/#contact" class="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 font-display text-sm font-semibold text-ink transition hover:bg-white">Inquire about your operation</a>
+    </div>
+
+  </main>
+
+  <footer class="border-t hairline mt-20 py-10 text-center text-sm text-mist/50">
+    <p>&copy; 2026 Neckles IO. <a href="/" class="hover:text-accent transition">neckles.io</a></p>
+  </footer>
+
+</body>
+</html>

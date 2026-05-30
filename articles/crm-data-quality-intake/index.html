@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your CRM Data Is Dirty Because of How Leads Enter It | Neckles IO</title>
+  <meta name="description" content="Clean data is a downstream problem. By the time someone is running a deduplication script or auditing contact records, the damage is already done at intake." />
+  <meta name="author" content="Alejandro (Ricky) Neckles, BASc." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://neckles.io/articles/crm-data-quality-intake/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Your CRM Data Is Dirty Because of How Leads Enter It" />
+  <meta property="og:description" content="Most CRM data quality problems trace back to one thing: the system was designed to receive only one type of input. Business cards and email threads are not edge cases." />
+  <meta property="og:url" content="https://neckles.io/articles/crm-data-quality-intake/" />
+  <meta property="og:image" content="https://neckles.io/assets/og-image.png" />
+  <meta property="article:author" content="Alejandro (Ricky) Neckles" />
+  <meta property="article:published_time" content="2026-05-30" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b0c10', abyss: '#050608', panel: '#1f2833',
+            mist: '#c5c6c7', accent: '#66fcf1', teal: '#45a29e',
+          },
+          fontFamily: {
+            sans: ['Inter','system-ui','sans-serif'],
+            display: ['Space Grotesk','Inter','sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #050608;
+      background-image: radial-gradient(ellipse 110rem 80rem at 85% -10%, rgba(69,162,158,0.18), transparent 58%);
+      background-attachment: fixed;
+    }
+    .hairline { border-color: rgba(255,255,255,0.08); }
+    .prose-article p { margin-bottom: 1.4rem; }
+    .prose-article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your CRM Data Is Dirty Because of How Leads Enter It",
+    "description": "Most CRM data quality problems trace back to one thing: the system was designed to receive only one type of input.",
+    "author": { "@type": "Person", "name": "Alejandro (Ricky) Neckles", "url": "https://neckles.io/#alejandro" },
+    "publisher": { "@type": "Organization", "name": "Neckles IO", "url": "https://neckles.io/" },
+    "datePublished": "2026-05-30",
+    "url": "https://neckles.io/articles/crm-data-quality-intake/"
+  }
+  </script>
+</head>
+<body class="font-sans text-mist antialiased">
+
+  <header class="border-b hairline bg-ink/90 backdrop-blur">
+    <div class="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+      <a href="/" class="font-display text-sm font-semibold text-accent hover:text-white transition">Neckles IO</a>
+      <a href="/#outcomes" class="text-sm text-mist hover:text-accent transition">Back to Work</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-6 py-20">
+
+    <div class="mb-10">
+      <p class="font-display text-xs font-semibold uppercase tracking-widest text-teal">Data Governance</p>
+      <h1 class="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+        Your CRM Data Is Dirty Because of How Leads Enter It
+      </h1>
+      <p class="mt-4 text-sm text-mist/60">By Alejandro Neckles &middot; May 2026</p>
+    </div>
+
+    <div class="prose-article max-w-2xl text-base leading-relaxed text-mist">
+
+      <p>Clean data is a downstream problem. By the time someone is running a deduplication script, auditing contact records, or asking the team to please stop entering company names in all caps, the damage is already done. The data arrived dirty and it is staying that way until someone spends time on it that they do not have.</p>
+
+      <p>The conversation about CRM data quality almost always focuses on the records themselves: how to clean them, how to maintain them, what governance policies to put in place. That is the wrong place to look. The records are dirty because of how leads entered the system, not because of what happened after.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">The intake problem</h2>
+
+      <p>Most CRM systems are designed to receive one type of input: a form submission. Name, email, phone, company, message. Structured, labeled, ready to map to a field. When a lead arrives that way, the data is clean by default because the form enforced the structure.</p>
+
+      <p>The problem is that a significant portion of real business leads do not arrive as form submissions. They arrive as business cards handed over at an event. As email threads forwarded from a colleague with "can you follow up on this?" As photos of handwritten notes. As a phone call that someone jotted down in a text document and meant to enter later.</p>
+
+      <p>These are not edge cases for most B2B sales operations. They are a material share of the inbound pipeline. And the CRM was not designed to receive them.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">What happens instead</h2>
+
+      <p>When structured input is the only path into the CRM, unstructured input creates a workaround. Someone does the translation manually: they read the business card, decide what each piece of information maps to, and type it in. They read the email thread, pull out the relevant contact details, and enter them by hand.</p>
+
+      <p>That manual step is where the data quality problems enter. The person doing the translation makes decisions that the system would not have made: whether to include a middle initial, how to format a phone number, whether the company name gets the Inc. or not. Across dozens of people doing this translation hundreds of times, the variance accumulates. The CRM fills with records that represent the same information in different formats, and the data quality project begins.</p>
+
+      <p>Manual entry also introduces lag. The business card stays in a pocket for three days before it gets entered. The email thread sits unprocessed while the person handling it works through other priorities. By the time the lead is in the system, the window for timely follow-up may have closed.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">Designing for the actual inputs</h2>
+
+      <p>The solution is not better data entry training. It is building an intake layer that can receive the inputs that actually arrive, not just the ones the system was designed for.</p>
+
+      <p>An image of a business card contains the same information as a form submission. A forwarded email thread contains contact details, context, and intent. The information is there. What has been missing is a reliable way to extract it into structured form without a human doing the translation.</p>
+
+      <p>When that extraction is automated, several things happen at once. The lag between a lead arriving and a lead being in the system drops to near zero. The formatting variance disappears because the same process handles every input the same way. The manual translation step is removed, which means the person who would have done it is doing something else instead.</p>
+
+      <p>The result is not just cleaner data. It is a CRM that actually reflects your pipeline, because all the inputs that were previously too inconvenient to enter are now in the system by default.</p>
+
+      <h2 class="font-display text-2xl font-semibold text-white">Where the audit starts</h2>
+
+      <p>If your CRM data quality is a recurring project, the right question is not how to clean the existing records. It is what percentage of your actual leads never made it into the CRM at all, and what percentage of the ones that did were entered in a format that makes them hard to use.</p>
+
+      <p>Both numbers are almost always larger than expected. And both trace back to the same place: an intake layer that was designed for one type of input in a business that receives many.</p>
+
+    </div>
+
+    <div class="mt-16 rounded-xl border hairline bg-panel/30 p-8 max-w-2xl">
+      <p class="font-display text-lg font-semibold text-white">If data quality is a recurring project rather than a non-issue, the problem is in the intake layer.</p>
+      <p class="mt-3 text-sm text-mist">Neckles IO designs intake systems that handle the inputs your business actually receives, not just the ones that arrive as form submissions.</p>
+      <a href="/#contact" class="mt-6 inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 font-display text-sm font-semibold text-ink transition hover:bg-white">Inquire about your operation</a>
+    </div>
+
+  </main>
+
+  <footer class="border-t hairline mt-20 py-10 text-center text-sm text-mist/50">
+    <p>&copy; 2026 Neckles IO. <a href="/" class="hover:text-accent transition">neckles.io</a></p>
+  </footer>
+
+</body>
+</html>
