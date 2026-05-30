@@ -1,0 +1,45 @@
+# Neckles IO
+
+> Enterprise Systems Architecture firm that engineers automated revenue systems for operationally mature companies.
+
+Neckles IO is a professional services firm based in Belleville, Ontario, Canada. The firm specializes in migrating operationally mature companies away from rigid SaaS rentals toward high-performance, owned infrastructure — engineering systems that scale revenue without scaling headcount.
+
+## About
+
+**Founder & Principal Architect:** Alejandro (Ricky) Neckles, BASc.
+Alejandro is a Mechanical Engineer (University of Toronto) turned Enterprise Systems Architect with over 20 years of experience. His career was built optimizing logistics for Telecom Giants and re-engineering support systems for National Airlines before founding Neckles IO.
+
+**Headquarters:** 233 Front Street, Belleville, Ontario, Canada, K8N 2Z4
+**Contact:** support@neckles.io
+**Website:** https://neckles.io/
+
+## Core Services
+
+- **Revenue Operations Automation** — End-to-end automation of quote-to-cash workflows; removes human admin from critical revenue paths to accelerate deal velocity.
+- **CRM Migration & Architecture** — Migration from rigid SaaS CRM platforms (e.g. Salesforce) to tailored, owned infrastructure. Specialization in enterprise data migration and system re-architecture.
+- **AI Agent Deployment & Governance** — Design and deployment of AI agents for data governance, intelligent ticket routing, and automated lead processing. Strict engineering discipline bridges AI capabilities to business logic.
+- **Operational Mobility Systems** — Custom mobile interfaces enabling real-time read/write access for distributed field teams, eliminating data lag at scale.
+- **Human-in-the-Loop Engineering** — Bespoke operational assets built on modern open platforms; delivers 10× the capability of off-the-shelf tools at a fraction of long-term operating cost.
+
+## Proven Outcomes
+
+| Sector | Problem | Solution | Result |
+|---|---|---|---|
+| Transportation & Logistics | Manual contract generation stalling deal velocity | Automated quote-approval and contract-generation workflow | ~$10M in accelerated annual deal volume |
+| National Retail (Pharmacy) | 1,300 field users lacked real-time data access | Custom mobile interface with real-time read/write | ~2,000 annual labor hours recaptured |
+| Aviation | Thousands of support tickets requiring manual triage | Intelligent routing architecture for automated ticket distribution | 100% automation of ticket distribution |
+| B2B Technology | Unstructured leads (business cards, emails) causing dirty data | AI Agent parsing unstructured text and images into clean client profiles | Zero-touch data integrity |
+
+## Positioning
+
+Neckles IO is not a SaaS reseller or staffing firm. The firm operates as an engineering partner — taking full ownership of system architecture and deployment. The firm's approach: automation requires strict governance. AI capabilities are harnessed only when paired with experienced engineering discipline.
+
+**Ideal client:** Operationally mature companies (50–5,000 employees) with complex revenue workflows who are outgrowing their current SaaS stack and need purpose-built infrastructure.
+
+## Additional Pages
+
+- Privacy Policy: https://neckles.io/privacy-policy/
+- Terms of Service: https://neckles.io/terms-of-service/
+- Full Disclosure: https://neckles.io/full-disclosure/
+- DMCA Policy: https://neckles.io/dmca/
+- Disclaimer: https://neckles.io/disclaimer/

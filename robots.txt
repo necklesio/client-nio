@@ -25,3 +25,6 @@ User-agent: Cohere-AI
 Allow: /
 
 Sitemap: https://neckles.io/sitemap.xml
+
+# AI context file
+# llms-txt: https://neckles.io/llms.txt
